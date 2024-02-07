@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Adapters_kt</string>
+    <string name="listview_demo">ListView Demo</string>
+    <string name="spinner_demo">Spinner Demo</string>
+    <string name="demo">Demo</string>
+    <string name="image">image</string>
+    <string name="custom_spinner_demo">Custom Spinner Demo</string>
+</resources>

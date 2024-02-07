@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/spinner_demo"
+        android:textSize="12sp"
+        android:layout_weight="2"
+        android:layout_margin="2dp">
+    </TextView>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:id="@+id/sp_fruits"
+        android:layout_margin="2dp">
+    </Spinner>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="@string/custom_spinner_demo"
+        android:textSize="12sp"
+        android:layout_weight="2"
+        android:layout_margin="2dp">
+    </TextView>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:id="@+id/sp_fruits_custom"
+        android:layout_margin="2dp">
+    </Spinner>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="@string/listview_demo"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:layout_weight="2"
+        android:layout_margin="2dp">
+    </TextView>
+
+    <ListView
+        android:id="@+id/lv_fruits"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        android:divider="@color/black"
+        android:dividerHeight="2dp"/>
+
+</LinearLayout>
