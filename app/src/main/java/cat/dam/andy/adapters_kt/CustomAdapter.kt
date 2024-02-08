@@ -24,29 +24,29 @@ class CustomAdapter(context: Context, var images: IntArray, var names: Array<Str
         return 0
     }
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val view: View
+    override fun getView(position: Int, view: View?, parent: ViewGroup?): View {
+        val convertView: View
         val holder: ViewHolder
 
-        if (convertView == null) {
-            view = inflater.inflate(R.layout.custom_listview_item, parent, false)
+        if (view == null) {
+            convertView = inflater.inflate(R.layout.custom_listview_item, parent, false)
             holder = ViewHolder()
-            holder.nameTextView = view.findViewById(R.id.tv_fruit_name)
-            holder.imageImageView = view.findViewById(R.id.iv_fruit_image)
-            view.tag = holder
+            holder.tvName = convertView.findViewById(R.id.tv_fruit_name)
+            holder.ivImage = convertView.findViewById(R.id.iv_fruit_image)
+            convertView.tag = holder
         } else {
-            view = convertView
-            holder = view.tag as ViewHolder
+            convertView = view
+            holder = convertView.tag as ViewHolder
         }
 
-        holder.nameTextView.text = names[position]
-        holder.imageImageView.setImageResource(images[position])
+        holder.tvName.text = names[position]
+        holder.ivImage.setImageResource(images[position])
 
-        return view
+        return convertView
     }
 
     private class ViewHolder {
-        lateinit var nameTextView: TextView
-        lateinit var imageImageView: ImageView
+        lateinit var tvName: TextView
+        lateinit var ivImage: ImageView
     }
 }
